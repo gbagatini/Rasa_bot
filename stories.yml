@@ -1,0 +1,88 @@
+version: "2.0"
+## map intents in nlu to actions in domain
+stories:
+
+- story: survey yes - vigorosa
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_great
+  - action: utter_survey
+  - intent: affirm
+  - action: utter_gender
+  - intent: affirm
+  - action: utter_employment
+  - intent: vigorosa
+  - action: utter_vigorosa_resposta
+  - intent: affirm
+  - action: utter_history_mental_illness
+  - intent: affirm
+  - action: utter_work_interference
+  - intent: affirm
+  - action: utter_company_no_employees
+  - intent: affirm
+  - action: utter_tech_company
+  - intent: deny
+  - action: utter_health_benefits
+  -
+
+
+
+
+
+
+- story: survey yes - moderada
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_great
+  - action: utter_survey
+  - intent: affirm
+  - action: utter_gender
+  - intent: affirm
+  - action: utter_employment
+  - intent: moderada
+  - action: utter_moderada_resposta
+  - intent: affirm
+  - action: utter_history_mental_illness
+  - intent: affirm
+  - action: utter_work_interference
+
+
+
+
+- story: survey no
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_great
+  - action: utter_survey
+  - intent: deny
+  - action: utter_goodbye
+
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_welcome
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up_two
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_welcome
+  - action: utter_goodbye
