@@ -1,0 +1,157 @@
+version: "2.0"
+## create responses for intents in nlu
+intents:
+  - greet
+  - name_entry
+  - thanks
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - wellbeing
+  - gender
+  - self_employment
+  - history_mental_illness
+  - work_interference
+  - company_no_employees
+  - tech_company
+  - health_benefits
+  - health_resources
+  - treatment_anonymity
+  - medical_leave
+  - discussing_mental_health
+  - willing_to_discuss_collegaue
+  - willing_to_discuss_supervisor
+  - willing_to_discuss_employer
+  - willing_to_discuss_physical_employer
+  - serious_mental_health
+  - negative_consequences_mental_coworker
+  
+actions:
+  - action_hello_world
+  
+entities:
+  - name
+  
+slots:
+  name:
+    type: unfeaturized  
+
+responses:
+  utter_greet:
+  - text: "Olá. Como posso ajudá-la?"
+  
+  utter_survey:
+  - text: "Olá. Tudo bem? A prática de atividade física durante a gestação é segura, traz diversos benefícios para a sua saúde e a saúde do seu bebê, além de reduzir os riscos de algumas complicações relacionadas à gravidez. Você gostaria de mais informações sobre a prática de atividades físicas durante a gravidez? "
+  
+  
+  utter_mood:
+  - text: "Olá, como você está?"
+  
+  utter_gender:
+  - text: "Você já pratica atividades físicas?"
+  
+  utter_employment:
+  - text: "Você prefere atividade física moderada ou vigorosas?"
+  
+  utter_vigorosa:
+  - text: "Você prefere atividade física moderada ou vigorosas?"
+  
+  utter_vigorosa_resposta:
+  - text: "Se você já era ativa antes da gestação e preferir as atividades físicas vigorosas, você deve praticar, no mínimo, 75 minutos de atividade física por semana.
+Na prática das atividades físicas vigorosas, você não vai conseguir nem conversar. A sua respiração vai ser muito mais rápida que o normal e os batimentos do seu coração vão aumentar muito. Atividades
+físicas vigorosas são aconselhadas se você já se exercitava com bastante frequência e intensidade vigorosa antes da gestação. Você gostaria de saber sobre os benefícios da prática de atividades durante a gravidez?"
+
+  utter_moderada_resposta:
+  - text: "Se você não apresenta contraindicações e preferir as atividades físicas moderadas, você deve praticar, no mínimo, 150 minutos de atividade física por semana. Na prática das atividades físicas moderadas, você vai conseguir conversar com dificuldade enquanto se movimenta e não vai conseguir cantar. A sua respiração e os batimentos do seu coração vão
+aumentar moderadamente. Você gostaria de saber sobre os benefícios da prática de atividades durante a gravidez?"
+  
+  
+  
+  
+  utter_history_mental_illness:
+  - text: "A atividade física para gestantes e mulheres no pós-parto traz os seguintes benefícios: Promove o seu desenvolvimento humano e bem-estar, ajudando a desfrutar de uma vida plena
+com melhor qualidade;
+● Promove relaxamento, divertimento e disposição;
+● Auxilia no controle do seu peso corporal;
+● Diminui o risco do desenvolvimento de pressão alta e diabetes gestacional (alto nível de açúcar no
+sangue durante a gravidez);
+Reduz o risco do desenvolvimento de pré-eclâmpsia (pressão alta durante a gestação);
+● Melhora a sua capacidade de fazer as atividades do dia a dia;
+● Ajuda a diminuir a intensidade das dores nas suas costas;
+● Reduz o risco de depressão;
+● Ajuda na inclusão social, e na criação e fortalecimento de laços sociais, vínculos e solidariedade;
+● Reduz o risco do seu bebê nascer prematuro;
+● Ajuda o seu bebê a nascer com peso adequado. Existem alguns mitos sobre a prática de exercícios físicos na gravidez, você gostaria de saber mais sobre esse tema?"
+  
+  utter_work_interference:
+  - text: "A prática de exercícios físicos:
+
+● Não aumenta o risco de ruptura da bolsa;
+● Não aumenta o risco de malformação do seu bebê;
+● Não induz ao trabalho de parto;
+● Não aumenta o risco de aborto;
+● Não aumenta o risco de mortalidade do seu bebê após o nascimento;
+● Não altera a composição, a quantidade e o gosto do leite materno;
+● Não seca o leite."
+  
+  utter_company_no_employees:
+  - text: "How many employees does your company or organization have?"
+  
+  utter_tech_company:
+  - text: "Is your employer primarily a tech company/organization?"
+  
+  utter_health_benefits:
+  - text: "Does your employer provide mental health benefits?"
+  
+  utter_health_resources:
+  - text: "Do you know the options for mental health care your employer provides?"
+  
+  utter_treatment_anonymity:
+  - text: "Is your anonymity protected if you choose to take advantage of mental health treatment resources?"
+  
+  utter_medical_leave:
+  - text: "How easy is it for you to take medical leave for a mental health condition?"
+  
+  utter_discussing_mental_health:
+  - text: "Do you think that discussing a mental health issue with your employer would have negative consequences?"
+  
+  utter_willing_to_discuss_collegaue:
+  - text: "Would you be willing to discuss a mental health issue with your coworkers?"
+  
+  utter_willing_to_discuss_employer:
+  - text: "Would you bring up a mental health issue with a potential employer in an interview?"
+  
+  utter_serious_mental_health:
+  - text: "Do you feel that your employer takes mental health as seriously as physical health?"
+  
+  utter_negative_consequences_mental_coworker:
+  - text: "Have you heard of or observed negative consequences for coworkers with mental health conditions in your workplace?"
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+    
+  utter_cheer_up_two:
+  - text: "Maybe you should try watching Tom and Jerry, it always helps!"
+  
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Tchau, se cuida! Espero te ver em breve !\nBasta digitar 'hey' ou 'hi' a qualquer momento para redirecionar para a fase principal do bot"
+
+  utter_iamabot:
+  - text: "I am a friendly mental health chat bot, your closest ally."
+  
+  utter_welcome:
+  - text: "Great! \nJust type 'hey' or 'hi' again to redirect to the main phase of bot !"
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
